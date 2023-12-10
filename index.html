@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mogo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+    <div class="container">
     <header class="header">
+        
         <a href="./index.html" class="logo">MoGo</a>
         <nav class="navigation">
             <ul class="nav_list">
                 <li class="nav_list_item"><a href="#" class="nav_list_link">ABOUT</a></li>
-                <li class="nav_list_item"><a href="#" class="nav_list_link">SERVICE</a></li>
+          <li class="nav_list_item"><a href="#" class="nav_list_link">SERVICE</a></li>
                 <li class="nav_list_item"><a href="#" class="nav_list_link">WORK</a></li>
                 <li class="nav_list_item"><a href="#" class="nav_list_link">BLOG</a></li>
                 <li class="nav_list_item"><a href="#" class="nav_list_link">CONTACT</a></li>
@@ -28,7 +31,7 @@
         <h2 class="service_title">AMAZING SERVICES</h2>
             <ul class="service_list">
                 <li class="service_list_item">
-                    <h4 class="service_list_item">
+                    <h4 class="service_list_title">
                     PHOTOGRAPHY
                     </h4>
                     <P class="service_list_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</P>
@@ -82,16 +85,16 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             </p>
             <ul class="team_list">
-                <li class="team_list_item"><img src="./images/1.jpg" alt="Matthew Dix">
-                    <h4 class="team_list">Matthew Dix</h4>  
+                <li class="team_list_item"><img src="./images/1.jpg" alt="Matthew Dix" class="team_list_img">
+                    <h4 class="team_list_title">Matthew Dix</h4>  
                     <p class="team_list_position">Graphic Design</p>
                 </li>
-                <li class="team_list_item"><img src=".//images/2.jpg" alt="Christopher Campbell">
-                    <h4 class="team_list">Christopher Campbell</h4>
+                <li class="team_list_item"><img src=".//images/2.jpg" alt="Christopher Campbell"  class="team_list_img">
+                    <h4 class="team_list_title">Christopher Campbell</h4>
                     <p class="team_list_position">Branding/UX design</p>
                 </li>
-                <li class="team_list_item"><img src="./images/3.jpg" alt="Michael Fertig ">
-                    <h4 class="team_list">Michael Fertig</h4>
+                <li class="team_list_item"><img src="./images/3.jpg" alt="Michael Fertig "  class="team_list_img">
+                    <h4 class="team_list_title">Michael Fertig</h4>
                     <p class="team_list_position">Developer</p>
                 </li>
             </ul>
@@ -104,5 +107,6 @@
             <button class="footer_form_btn" type="submit">Subscribe</button>
         </form>
     </footer>
+</div>
 </body>
 </html>

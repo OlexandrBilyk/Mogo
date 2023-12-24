@@ -32,17 +32,25 @@ button{
     width: 1230px;
     padding: 0 15px;
     margin: 0 auto;
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
 }
 /* header */
 .header{
     padding: 17px 0 81px;
-    outline:2px solid blue;
+    /* outline:2px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .logo{
     color: var(--main-accent);
     font-size: 30px;
     font-weight: 700;
+}
+.nav_list{
+    display: flex;
+    gap: 55px;
+
 }
 .nav_list_link{
     color: var(--main-accent);
@@ -53,7 +61,8 @@ button{
 }
 /* main */
 .service{
-    outline: 2px dotted blueviolet;
+    /* outline: 2px dotted blueviolet; */
+    padding: 68px;
 }
 .service_info{
  margin-bottom: 20px;
@@ -61,7 +70,15 @@ button{
 .service_title{
     margin-bottom: 109px;
 }
-
+.service_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 100px;
+}
+.service_list_item{
+    width: 274px;
+}
 .service_info, .team_info{
     color: #333;
 
@@ -95,9 +112,10 @@ text-align: center;
 }
 /* team */
 .team{
-    outline: 3px dashed yellow;
+    /* outline: 3px dashed yellow; */
     padding: 100px 0 81px;
 }
+
 .team-info{
     margin-bottom: 17px;
 }
@@ -111,6 +129,14 @@ font-family: 'Roboto', sans-serif;
 font-size: 15px;
 font-weight: 400;
 text-align: center;
+}
+.team_list{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.team_list_item{
+    width: 380px;
 }
 .team_list_img{
     margin-bottom: 30px;
@@ -129,11 +155,15 @@ font-family: 'Roboto', sans-serif;
 font-size: 15px;
 font-style: italic;
 font-weight: 300;
+text-align: center;
 }
 /* footer */
 .footer{
-    outline: 4px solid cyan;
+    /* outline: 4px solid cyan; */
     padding:9px 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
 }
 .footer_info{
@@ -144,6 +174,7 @@ font-weight: 300;
 .footer_link:hover{
     color: var(--hover);
 }
+
 .footer_form_input{
     width: 230px;
     height: 39px;

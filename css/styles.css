@@ -37,7 +37,6 @@ button{
 /* header */
 .header{
     padding: 17px 0 81px;
-    /* outline:2px solid blue; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,6 +54,18 @@ button{
 .nav_list_link{
     color: var(--main-accent);
     font-weight: 400;
+    position: relative;
+}
+.nav_list_link:hover::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color:var(--hover);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    
 }
 .nav_list_link:hover{
     color: var(--hover);
@@ -62,13 +73,24 @@ button{
 /* main */
 .service{
     /* outline: 2px dotted blueviolet; */
-    padding: 68px;
+    padding: 68px 0 ;
+}
+.service_title::after, .team_title::after{
+    content: '';
+    display: block;
+    width:60px;
+    height: 4px;
+    background-color: var(--hover);
+    margin: 0 auto;
+}
+.service_title::after{
+    margin-top: 40px;
 }
 .service_info{
  margin-bottom: 20px;
 }
 .service_title{
-    margin-bottom: 109px;
+    margin-bottom: 65px;
 }
 .service_list{
     display: flex;
@@ -76,8 +98,33 @@ button{
     justify-content: space-between;
     row-gap: 100px;
 }
+/*.service_list_item::before{
+    content: '';
+    display: block;
+    width: 37.796px;
+    height: 37px;
+}
+ .service_list_item:nth-child(1):before{
+    background-image: url('../images/alarm1.svg');
+}
+.service_list_item:nth-child(2):before{
+    background-image: url('../images/bar-graph1.svg');
+}
+.service_list_item:nth-child(3):before{
+    background-image: url('../images/display1.svg');
+}
+.service_list_item:nth-child(4):before{
+    background-image: url('../images/paper1.svg');
+}
+.service_list_item:nth-child(5):before{
+    background-image: url('../images/home1.svg');
+}
+.service_list_item:nth-child(6):before{
+    background-image: url('../images/digital-marketing1.svg');
+} */
 .service_list_item{
-    width: 274px;
+    display: flex;
+    gap: 20px;
 }
 .service_info, .team_info{
     color: #333;
@@ -87,17 +134,22 @@ font-size: 24px;
 font-weight: 400;
 text-align: center;
 }
+
 .service_title, .team_title{
     color:var(--title);
     font-size: 30px;
     font-variant: all-small-caps;
     text-align: center;
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
 }
-
+.service-list__box{
+    max-width: 310px;
+}
+.service-list__svg{
+    fill: #95e1d3;
+}
 .service_list_title{
     color: #333;
-    /* uppercase */
     font-size: 14px;
     font-weight: 400;
     font-variant: small-caps;
@@ -119,10 +171,12 @@ text-align: center;
 .team-info{
     margin-bottom: 17px;
 }
-
+.team_title::after{
+    margin-top: 36px;
+}
 .team_descr{
     color: var(--text);
-    margin: 85px 0 27px;
+    margin: 45px 0 27px;
 
 text-align: center;
 font-family: 'Roboto', sans-serif;

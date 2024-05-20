@@ -25,6 +25,9 @@ body{
     background-color:var(--background-color);
     font-size: 14px;
 }
+input{
+    outline: none;
+}
 button{
     cursor: pointer;
 }
@@ -228,19 +231,32 @@ text-align: center;
 .footer_link:hover{
     color: var(--hover);
 }
-
+.footer_form{
+    position: relative;
+}
 .footer_form_input{
     width: 230px;
     height: 39px;
     border: 1px solid var(--text);
     padding: 12px 10px 11px;
-
+    pointer-events: none;
+}
+.footer_form_input:focus + .footer_form_label,
+.footer_form_input.active + .footer_form_label{
+    transition: transform 0.5s ease;
+    transform: translate(-5px, -30px);
+}
+.footer_form_label{
+    position: absolute;
+    top: 10px;
+    left: 12px;
     color: var(--text);
-font-family: 'Roboto', sans-serif;
-font-size: 14px;
-font-style: italic;
-font-weight: 300;
-line-height: normal;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: normal;
+
 }
 .footer_form_btn{
     width: 150px;

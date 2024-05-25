@@ -1,0 +1,33 @@
+.header {
+  padding: 17px 0 81px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: getColor('main-accent');
+  font-size: 30px;
+  font-weight: 700;
+}
+.nav-list {
+  display: flex;
+  gap: 55px;
+  &__link {
+    color:  getColor('main-accent');
+    font-weight: 400;
+    position: relative;
+    &:hover::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color:  getColor('hover');
+      position: absolute;
+      top: 30px;
+      left: 0;
+    }
+    &:hover {
+      color:  getColor('hover');
+    }
+  }
+}

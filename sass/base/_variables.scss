@@ -1,0 +1,11 @@
+
+$Colors: (
+  'main-accent': #95e1d3,
+  'hover':#f28181,
+  'title':#333 ,
+  'text': #b6b6b6,
+  'background-color': #fff,
+);
+@function getColor($key) {
+  @return map-get($Colors, $key);
+}

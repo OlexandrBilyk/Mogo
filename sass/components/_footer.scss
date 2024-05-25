@@ -1,0 +1,59 @@
+.footer {
+  /* outline: 4px solid cyan; */
+  padding: 9px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__info {
+    color: getColor('title');
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &__link {
+    &:hover {
+      color: getColor('hover');
+    }
+  }
+}
+.footer-form {
+  position: relative;
+  &__input {
+    width: 230px;
+    height: 39px;
+    border: 1px solid getColor('text');
+    padding: 12px 10px 11px;
+  }
+  &__input:focus + &__label,
+  &__input.active + &__label {
+    transition: transform 0.5s ease;
+    transform: translate(-5px, -30px);
+  }
+  &__label {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    color: getColor('text');
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: normal;
+  }
+  &__btn {
+    width: 150px;
+    height: 40px;
+    background-color: getColor('main-accent');
+    color: getColor('background-color');
+
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    font-variant: all-small-caps;
+    border: none;
+    &:hover {
+      background-color: getColor('hover');
+    }
+  }
+}

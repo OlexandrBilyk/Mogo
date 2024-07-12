@@ -21,6 +21,10 @@
       <header class="header">
         <a href="./index.html" class="logo">MoGo</a>
         <nav class="navigation">
+          <input type="checkbox" class="toggle-input" id="toggle-input">
+          <label for="toggle-input" class="toggle-label">
+            <span class="toggle-span"></span>
+          </label>
           <ul class="nav-list">
             <li class="nav-list__item">
               <a href="#" class="nav-list__link">ABOUT</a>
@@ -131,36 +135,42 @@
           </p>
           <ul class="team-list">
             <li class="team-list__item">
-              <img
-                src="./images/1.jpg"
-                alt="Matthew Dix"
-                class="team-list__img"
-              />
+              <div class="team-list__thumb">
+                <img
+                  src="./images/1.jpg"
+                  alt="Matthew Dix"
+                  class="team-list__img"
+                />
+              </div>
               <h4 class="team-list__title">Matthew Dix</h4>
               <p class="team-list__position">Graphic Design</p>
             </li>
             <li class="team-list__item">
-              <img
-                src=".//images/2.jpg"
-                alt="Christopher Campbell"
-                class="team-list__img"
-              />
+              <div class="team-list__thumb">
+                <img
+                  src=".//images/2.jpg"
+                  alt="Christopher Campbell"
+                  class="team-list__img"
+                />
+              </div>
               <h4 class="team-list__title">Christopher Campbell</h4>
               <p class="team-list__position">Branding/UX design</p>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/3.jpg"
-                alt="Michael Fertig "
-                class="team-list__img"
-              />
+              <div class="team-list__thumb">
+                <img
+                  src="./images/3.jpg"
+                  alt="Michael Fertig "
+                  class="team-list__img"
+                />
+              </div>
               <h4 class="team-list__title">Michael Fertig</h4>
               <p class="team-list__position">Developer</p>
             </li>
           </ul>
         </section>
       </main>
-      <footer class="footer">
+       <footer class="footer">
         <p class="footer__info">
           &copy; 2016 MoGo free PSD template by
           <a href="#" class="footer__link">Laaqiq</a>
@@ -173,8 +183,7 @@
             input
           />
           <label for="footer-form__input" class="footer-form__label"
-            >Your Email...</label
-          >
+            >Your Email...</label>
           <button class="footer-form__btn" type="submit">Subscribe</button>
         </form>
       </footer>

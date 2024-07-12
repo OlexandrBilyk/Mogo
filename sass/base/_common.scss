@@ -28,7 +28,12 @@ button {
   cursor: pointer;
 }
 .container {
-  width: 1230px;
+  // width: 1230px;
+  min-width: 320px;
+  max-width: 767px;
+  @media (min-width: 768px) {
+    max-width: 1230px;
+  }
   padding: 0 15px;
   margin: 0 auto;
   /* outline: 2px solid red; */

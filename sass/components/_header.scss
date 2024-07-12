@@ -5,29 +5,123 @@
   align-items: center;
 }
 .logo {
-  color: getColor('main-accent');
-  font-size: 30px;
+  color: getColor("main-accent");
+  font-size: 40px;
   font-weight: 700;
+  @media (min-width: 768px) {
+    font-size: 30px;
+  }
+}
+.navigation {
+  order: 1;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  @media (min-width: 768px) {
+    position: static;
+  }
 }
 .nav-list {
   display: flex;
-  gap: 55px;
+  flex-direction: column;
+  transition: transform 250ms ease;
+  transform: translateY(-500%);
+  @media (min-width: 768px) {
+    transform: translate(0);
+    flex-direction: row;
+    gap: 50px;
+  }
+  @media (max-width: 767px) {
+    position: absolute;
+    right: 0;
+    max-width: 400px;
+    min-width: 310px;
+    width: 100%;
+    padding: 20px;
+    background-color: gray;
+    border-radius: 10px;
+  }
+
   &__link {
-    color:  getColor('main-accent');
+    transition: color 250ms ease;
+    color: getColor("main-accent");
     font-weight: 400;
     position: relative;
-    &:hover::after {
+    &::after {
       content: "";
       display: block;
-      width: 100%;
+      width: 0;
       height: 3px;
-      background-color:  getColor('hover');
+      background-color: getColor("hover");
       position: absolute;
       top: 30px;
       left: 0;
+      transition: width 250ms ease;
     }
-    &:hover {
-      color:  getColor('hover');
+    &:hover::after {
+      width: 100%;
+    }
+    &:hover,
+    &:focus {
+      color: getColor("hover");
     }
   }
+}
+
+.toggle-input {
+  display: none;
+}
+.toggle-label {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 5px;
+  right: 10px;
+  z-index: 10;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+.toggle-span,
+.toggle-span::after,
+.toggle-span::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 1.5px;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 250ms;
+}
+.toggle-span {
+  top: 5px;
+
+  &::before {
+    top: 10px;
+  }
+  &::after {
+    top: 20px;
+  }
+}
+.toggle-input:checked ~ .nav-list {
+  transform: translateY(0);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.toggle-input:checked ~ .toggle-label .toggle-span {
+  top: 15px;
+  transform: rotate(-45deg);
+}
+.toggle-input:checked ~ .toggle-label .toggle-span::before {
+  top: 0;
+  transform: rotate(0);
+}
+.toggle-input:checked ~ .toggle-label .toggle-span::after {
+  top: 0;
+  transform: rotate(90deg);
 }

@@ -1,9 +1,12 @@
 .service {
   /* outline: 2px dotted blueviolet; */
-  padding: 68px 0;
+  padding: 40px 0;
+  @media (min-width: 768px) {
+    padding: 68px 0;
+  }
   &__title {
-    color:  getColor('title');
-    font-size: 30px;
+    color: getColor("title");
+    font-size: 40px;
     font-variant: all-small-caps;
     text-align: center;
     text-transform: uppercase;
@@ -13,9 +16,12 @@
       display: block;
       width: 60px;
       height: 4px;
-      background-color:  getColor('hover');
+      background-color: getColor("hover");
       margin: 0 auto;
       margin-top: 40px;
+    }
+    @media (min-width: 768px) {
+      font-size: 30px;
     }
   }
   &__info {
@@ -23,19 +29,31 @@
     color: #333;
 
     font-family: "Kaushan Script", cursive;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 400;
     text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
   }
 }
 .service-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: 100px;
+  gap: 100px;
+  @media (min-width: 768px) {
+    column-gap: 70px;
+  }
   &__item {
+    flex: 1 1 100%;
     display: flex;
     gap: 20px;
+
+    @media (min-width: 768px) {
+      flex-basis: calc((100% - 140px) / 3);
+    }
   }
   &__box {
     max-width: 310px;
@@ -45,17 +63,24 @@
   }
   &__title {
     color: #333;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 500;
     font-variant: small-caps;
     margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
   }
   &__text {
-    color:  getColor('text');
+    color: getColor("text");
     font-family: "Roboto", sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.47; /* 146.667% */
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
   }
 }
-

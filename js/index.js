@@ -1,4 +1,4 @@
-let input = document.querySelectorAll('input')[0];
+let input = document.getElementById('footer-form__input');
 input.oninput = function () {
     if(input.value == ""){
         input.classList.remove('active');

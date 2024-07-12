@@ -460,8 +460,7 @@ button {
   width: 100%;
   height: 39px;
   border: 1px solid #b6b6b6;
-  padding: 0 10px 11px;
-  text-align: center;
+  padding: 11px 10px;
 }
 .footer-form__input:focus + .footer-form__label, .footer-form__input.active + .footer-form__label {
   transition: transform 0.5s ease;
